@@ -1,7 +1,7 @@
 'use client';
 
-import {useEffect, useState} from 'react';
-import {Settings} from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { Settings } from 'lucide-react';
 import {
   SiJavascript,
   SiReact,
@@ -13,7 +13,7 @@ import {
   SiFirebase,
   SiTypescript,
   SiAdobecreativecloud,
-} from 'simple-icons-react';
+} from 'simple-icons';
 
 const ToolkitDisplay = () => {
   const tools = [
@@ -72,9 +72,11 @@ const ToolkitDisplay = () => {
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
           >
             {tool.icon && (
-              React.createElement(tool.icon, {
-                style: {width: '2em', height: '2em', verticalAlign: 'middle'},
-              })
+              <div style={{ width: '2em', height: '2em', verticalAlign: 'middle' }}>
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <path d={tool.icon.path} />
+                </svg>
+              </div>
             )}
             <span className="text-lg text-foreground mt-2">{tool.name}</span>
           </div>
