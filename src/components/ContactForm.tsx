@@ -8,8 +8,8 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="py-12 bg-[#ADD8E6]">
-      <div className="container mx-auto">
+    <section className="py-12 bg-[#ADD8E6] w-full">
+      <div className="container mx-auto px-4">
         <div className="md:flex md:items-start md:justify-between gap-8">
           {/* Left side: Contact Information */}
           <div className="md:w-1/2 text-center md:text-left">
@@ -36,9 +36,6 @@ const ContactForm = () => {
           <div className="md:w-1/2">
             <form className="max-w-md mx-auto">
               <div className="mb-4">
-                <label htmlFor="name" className="block text-foreground text-sm font-bold mb-2">
-                  Name
-                </label>
                 <Input
                   type="text"
                   id="name"
@@ -47,9 +44,6 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-4">
-                <label htmlFor="email" className="block text-foreground text-sm font-bold mb-2">
-                  Email
-                </label>
                 <Input
                   type="email"
                   id="email"
@@ -58,9 +52,6 @@ const ContactForm = () => {
                 />
               </div>
               <div className="mb-6">
-                <label htmlFor="message" className="block text-foreground text-sm font-bold mb-2">
-                  Message
-                </label>
                 <Textarea
                   id="message"
                   rows={4}
