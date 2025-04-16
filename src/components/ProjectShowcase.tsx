@@ -1,12 +1,18 @@
+'use client';
+
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
 
 const ProjectShowcase = () => {
   const projects = [
     {
-      title: 'Project 1',
-      description: 'A brief description of project 1.',
+      title: 'Pet Adoption Website',
+      description:
+        'Connect, adopt, and care — your gateway to a better life for pets.',
       image: 'https://picsum.photos/600/400',
       githubLink: '#',
       demoLink: '#',
+      techStack: ['Next.js', 'React', 'Bootstrap'],
     },
     {
       title: 'Project 2',
@@ -14,47 +20,101 @@ const ProjectShowcase = () => {
       image: 'https://picsum.photos/600/400',
       githubLink: '#',
       demoLink: '#',
+      techStack: [],
+    },
+    {
+      title: 'Project 3',
+      description: 'A brief description of project 3.',
+      image: 'https://picsum.photos/600/400',
+      githubLink: '#',
+      demoLink: '#',
+      techStack: [],
     },
   ];
 
   return (
     <section className="py-12">
       <h2 className="text-3xl font-semibold text-accent mb-6">
-        Project Showcase
+        Project Showcase 💻
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <div key={index} className="rounded-lg shadow-md overflow-hidden">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                {project.title}
-              </h3>
-              <p className="text-foreground">{project.description}</p>
-              <div className="mt-4">
-                <a
-                  href={project.githubLink}
-                  className="text-primary hover:text-accent mr-4"
-                >
-                  GitHub
-                </a>
-                <a
-                  href={project.demoLink}
-                  className="text-primary hover:text-accent"
-                >
-                  Live Demo
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
+          {/* First Project Full Width */}
+          {projects.length > 0 && (
+            <ProjectCard project={projects[0]} isFullWidth={true} />
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2">
+          {/* Remaining Projects (Two per row) */}
+          {projects.length > 1 &&
+            projects.slice(1).map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+        </div>
       </div>
     </section>
   );
 };
 
+interface ProjectCardProps {
+  project: {
+    title: string;
+    description: string;
+    image: string;
+    githubLink: string;
+    demoLink: string;
+    techStack: string[];
+  };
+  isFullscreen?: boolean;
+  isFullWidth?: boolean;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className={`rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 ${
+        isFullWidth ? 'md:col-span-2' : ''
+      } ${
+        isHovered ? 'transform scale-105' : ''
+      }`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover"
+      />
+      <div className="absolute inset-0 bg-background/80 text-foreground flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
+        <h3 className="text-xl font-semibold">{project.title}</h3>
+        <p className="text-md">{project.description}</p>
+        <div className="flex gap-2">
+          {project.techStack.map((tech, index) => (
+            <Button variant="secondary" size="sm" key={index}>
+              {tech}
+            </Button>
+          ))}
+        </div>
+        <div className="flex gap-4">
+          <Button asChild variant="outline">
+            <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+              GitHub
+            </a>
+          </Button>
+          <Button asChild>
+            <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
+              View Live
+            </a>
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default ProjectShowcase;
+
+    
