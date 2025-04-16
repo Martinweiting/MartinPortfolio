@@ -8,8 +8,8 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="py-12 bg-[#ADD8E6] w-full">
-      <div className="container mx-auto px-4">
+    <section className="w-full bg-[#ADD8E6] py-12">
+      <div className="container mx-auto px-4 max-w-[1200px]">
         <div className="md:flex md:items-start md:justify-between gap-8">
           {/* Left side: Contact Information */}
           <div className="md:w-1/2 text-center md:text-left">
