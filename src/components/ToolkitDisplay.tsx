@@ -2,49 +2,49 @@
 
 import { useEffect, useState } from 'react';
 import { Settings } from 'lucide-react';
-import * as SiIcons from 'simple-icons-react';
+// import * as SiIcons from 'simple-icons-react';
 
 const ToolkitDisplay = () => {
   const tools = [
     {
       name: 'JavaScript',
-      icon: 'javascript',
+      icon: 'SiJavascript',
     },
     {
       name: 'React',
-      icon: 'react',
+      icon: 'SiReact',
     },
     {
       name: 'Next.js',
-      icon: 'nextdotjs',
+      icon: 'SiNextdotjs',
     },
     {
       name: 'Tailwind CSS',
-      icon: 'tailwindcss',
+      icon: 'SiTailwindcss',
     },
     {
       name: 'Node.js',
-      icon: 'nodedotjs',
+      icon: 'SiNodedotjs',
     },
     {
       name: 'HTML',
-      icon: 'html5',
+      icon: 'SiHtml5',
     },
     {
       name: 'CSS',
-      icon: 'css3',
+      icon: 'SiCss3',
     },
     {
       name: 'Firebase',
-      icon: 'firebase',
+      icon: 'SiFirebase',
     },
     {
       name: 'TypeScript',
-      icon: 'typescript',
+      icon: 'SiTypescript',
     },
     {
       name: 'Adobe Creative Cloud',
-      icon: 'adobecreativecloud',
+      icon: 'SiAdobecreativecloud',
     },
   ];
 
@@ -56,7 +56,8 @@ const ToolkitDisplay = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {tools.map((tool, index) => {
-          const SimpleIconComponent = SiIcons[`Si${tool.icon}`];
+          // const SimpleIconComponent = SiIcons[tool.icon as keyof typeof SiIcons];
+          const SimpleIconComponent = () => <div>{tool.name}</div>;
 
           return (
             <div
@@ -65,7 +66,8 @@ const ToolkitDisplay = () => {
             >
               {SimpleIconComponent && (
                 <div style={{ width: '2em', height: '2em', verticalAlign: 'middle' }}>
-                  <SimpleIconComponent />
+                  {/* <SimpleIconComponent /> */}
+                  ICON
                 </div>
               )}
               <span className="text-lg text-foreground mt-2">{tool.name}</span>
