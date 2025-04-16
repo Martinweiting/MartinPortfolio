@@ -2,25 +2,20 @@
 
 import { useEffect, useState } from 'react';
 import { Settings } from 'lucide-react';
+import * as SiIcons from 'simple-icons-react';
 
 const ToolkitDisplay = () => {
   const tools = [
-    { name: 'JavaScript', icon: 'javascript' },
-    { name: 'React', icon: 'react' },
-    { name: 'Next.js', icon: 'nextdotjs' },
-    { name: 'Tailwind CSS', icon: 'tailwindcss' },
-    { name: 'Node.js', icon: 'nodedotjs' },
-    { name: 'HTML', icon: 'html5' },
-    { name: 'CSS', icon: 'css3' },
-    { name: 'Firebase', icon: 'firebase' },
-    { name: 'TypeScript', icon: 'typescript' },
-    { name: 'Git', icon: 'git' },
-    { name: 'GitHub', icon: 'github' },
-    { name: 'Figma', icon: 'figma' },
-    { name: 'NPM', icon: 'npm' },
-    { name: 'Redux', icon: 'redux' },
-    { name: 'Prisma', icon: 'prisma' },
-    { name: 'Docker', icon: 'docker' },
+    { name: 'JavaScript', icon: SiIcons.SiJavascript },
+    { name: 'React', icon: SiIcons.SiReact },
+    { name: 'Next.js', icon: SiIcons.SiNextdotjs },
+    { name: 'Tailwind CSS', icon: SiIcons.SiTailwindcss },
+    { name: 'Node.js', icon: SiIcons.SiNodedotjs },
+    { name: 'HTML', icon: SiIcons.SiHtml5 },
+    { name: 'CSS', icon: SiIcons.SiCss3 },
+    { name: 'Firebase', icon: SiIcons.SiFirebase },
+    { name: 'TypeScript', icon: SiIcons.SiTypescript },
+    { name: 'Adobe Creative Cloud', icon: SiIcons.SiAdobecreativecloud },
   ];
 
   return (
@@ -36,10 +31,7 @@ const ToolkitDisplay = () => {
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
           >
             {tool.icon && (
-              <svg className="h-6 w-6 text-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <title>{tool.name} icon</title>
-                <use xlinkHref={`/simple-icons.svg#si-${tool.icon}`} />
-              </svg>
+              <tool.icon className="h-6 w-6 text-primary" />
             )}
             <span className="text-lg text-foreground mt-2">{tool.name}</span>
           </div>
