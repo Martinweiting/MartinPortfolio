@@ -14,7 +14,7 @@ const ContactForm = () => {
         <div className="md:flex md:items-start md:justify-between gap-8">
           {/* Left side: Contact Information */}
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-3xl font-semibold text-accent mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2">
+            <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2">
               Let's Connect! <Mail className="h-6 w-6 text-muted-foreground" />
             </h2>
             <p className="text-lg text-foreground mb-6">

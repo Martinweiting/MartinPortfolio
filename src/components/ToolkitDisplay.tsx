@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { Settings } from 'lucide-react';
+
 import {
   SiJavascript,
   SiReact,
@@ -62,7 +63,7 @@ const ToolkitDisplay = () => {
 
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-semibold text-accent mb-6 flex items-center gap-2">
+      <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
         My Toolkit
         <Settings className="h-6 w-6 text-muted-foreground" />
       </h2>
