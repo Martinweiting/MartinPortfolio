@@ -53,7 +53,7 @@ const ToolkitDisplay = () => {
             key={index}
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
           >
-            <tool.icon className="h-6 w-6 text-primary" />
+            {tool.icon && <tool.icon className="h-6 w-6 text-primary" />}
             <span className="text-lg text-foreground mt-2">{tool.name}</span>
           </div>
         ))}
