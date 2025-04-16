@@ -2,158 +2,60 @@
 
 import {useEffect, useState} from 'react';
 import {Settings} from 'lucide-react';
+import {
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiNodedotjs,
+  SiHtml5,
+  SiCss3,
+  SiFirebase,
+  SiTypescript,
+  SiAdobecreativecloud,
+} from 'simple-icons-react';
 
 const ToolkitDisplay = () => {
   const tools = [
     {
       name: 'JavaScript',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiJavascript,
     },
     {
       name: 'React',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiReact,
     },
     {
       name: 'Next.js',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiNextdotjs,
     },
     {
       name: 'Tailwind CSS',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiTailwindcss,
     },
     {
       name: 'Node.js',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiNodedotjs,
     },
     {
       name: 'HTML',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiHtml5,
     },
     {
       name: 'CSS',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiCss3,
     },
     {
       name: 'Firebase',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiFirebase,
     },
     {
       name: 'TypeScript',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiTypescript,
     },
     {
       name: 'Adobe Creative Cloud',
-      icon: (
-        <svg
-          viewBox="0 0 24 24"
-          width="1.5em"
-          height="1.5em"
-          fill="currentColor"
-          style={{verticalAlign: 'middle'}}
-        >
-          <path d="M0 0h24v24H0z" fill="none" />
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM13 7h-2v5h2v-5zm0 6h-2v2h2v-2z" />
-        </svg>
-      ),
+      icon: SiAdobecreativecloud,
     },
   ];
 
@@ -169,7 +71,11 @@ const ToolkitDisplay = () => {
             key={index}
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
           >
-            {tool.icon}
+            {tool.icon && (
+              React.createElement(tool.icon, {
+                style: {width: '2em', height: '2em', verticalAlign: 'middle'},
+              })
+            )}
             <span className="text-lg text-foreground mt-2">{tool.name}</span>
           </div>
         ))}
