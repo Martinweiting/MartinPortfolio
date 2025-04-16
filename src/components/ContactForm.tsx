@@ -4,10 +4,11 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Mail } from 'lucide-react';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="py-12">
+    <section className="py-12 bg-[#ADD8E6]">
       <div className="flex flex-col items-center justify-center">
         <h2 className="text-3xl font-semibold text-accent mb-4 flex items-center gap-2">
           Let's Connect! <Mail className="h-6 w-6 text-muted-foreground" />
@@ -28,9 +29,9 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <form className="max-w-lg mx-auto">
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-foreground text-sm font-bold mb-2 sr-only">
+      <form className="max-w-2xl mx-auto px-6">
+        <div className="mb-4 flex items-center">
+          <label htmlFor="name" className="block text-foreground text-sm font-bold mb-2 mr-4 w-24 text-right">
             Name
           </label>
           <Input
@@ -40,8 +41,8 @@ const ContactForm = () => {
             placeholder="Name"
           />
         </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-foreground text-sm font-bold mb-2 sr-only">
+        <div className="mb-4 flex items-center">
+          <label htmlFor="email" className="block text-foreground text-sm font-bold mb-2 mr-4 w-24 text-right">
             Email
           </label>
           <Input
@@ -51,11 +52,11 @@ const ContactForm = () => {
             placeholder="Email"
           />
         </div>
-        <div className="mb-6">
-          <label htmlFor="message" className="block text-foreground text-sm font-bold mb-2 sr-only">
+        <div className="mb-6 flex items-start">
+          <label htmlFor="message" className="block text-foreground text-sm font-bold mb-2 mr-4 w-24 text-right mt-2">
             Message
           </label>
-          <textarea
+          <Textarea
             id="message"
             rows={4}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
