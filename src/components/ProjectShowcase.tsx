@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState } from 'react';
@@ -34,7 +33,7 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <section className="py-12">
+    <section className="py-12 px-6 md:px-16 lg:px-24">
       <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
         Project Showcase 💻
       </h2>
@@ -89,7 +88,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
         alt={project.title}
         className="w-full h-48 object-cover"
       />
-      <div className="absolute inset-0 bg-background/80 text-foreground flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
+      <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-semibold">{project.title}</h3>
         <p className="text-md">{project.description}</p>
         <div className="flex gap-2">
