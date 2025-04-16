@@ -99,12 +99,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
           ))}
         </div>
         <div className="flex gap-4">
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" className="bg-[#ADD8E6] text-white hover:bg-white hover:text-[#ADD8E6] transition-colors duration-300">
             <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
           </Button>
-          <Button asChild>
+          <Button asChild className="bg-[#ADD8E6] text-white hover:bg-white hover:text-[#ADD8E6] transition-colors duration-300">
             <a href={project.demoLink} target="_blank" rel="noopener noreferrer">
               View Live
             </a>
@@ -116,5 +116,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
 };
 
 export default ProjectShowcase;
-
-    
