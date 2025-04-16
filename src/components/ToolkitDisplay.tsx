@@ -2,49 +2,49 @@
 
 import { useEffect, useState } from 'react';
 import { Settings } from 'lucide-react';
-import * as SiIcons from 'simple-icons-react';
+// import * as SiIcons from 'simple-icons-react';
 
 const ToolkitDisplay = () => {
   const tools = [
     {
       name: 'JavaScript',
-      icon: SiIcons.SiJavascript ? <SiIcons.SiJavascript className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'React',
-      icon: SiIcons.SiReact ? <SiIcons.SiReact className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'Next.js',
-      icon: SiIcons.SiNextdotjs ? <SiIcons.SiNextdotjs className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'Tailwind CSS',
-      icon: SiIcons.SiTailwindcss ? <SiIcons.SiTailwindcss className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'Node.js',
-      icon: SiIcons.SiNodedotjs ? <SiIcons.SiNodedotjs className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'HTML',
-      icon: SiIcons.SiHtml5 ? <SiIcons.SiHtml5 className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'CSS',
-      icon: SiIcons.SiCss3 ? <SiIcons.SiCss3 className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'Firebase',
-      icon: SiIcons.SiFirebase ? <SiIcons.SiFirebase className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'TypeScript',
-      icon: SiIcons.SiTypescript ? <SiIcons.SiTypescript className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
     {
       name: 'Adobe Creative Cloud',
-      icon: SiIcons.SiAdobecreativecloud ? <SiIcons.SiAdobecreativecloud className="h-6 w-6 text-primary" /> : null,
+      icon: null,
     },
   ];
 
