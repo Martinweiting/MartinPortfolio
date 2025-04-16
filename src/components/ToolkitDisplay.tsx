@@ -1,45 +1,26 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import {
-  SiJavascript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiHtml5,
-  SiCss3,
-  SiFirebase,
-  SiTypescript,
-  SiGit,
-  SiGithub,
-  SiFigma,
-  SiNpm,
-  SiRedux,
-  SiPrisma,
-  SiDocker,
-} from 'simple-icons';
 import { Settings } from 'lucide-react';
-import SimpleIcon from 'simple-icons-react';
 
 const ToolkitDisplay = () => {
   const tools = [
-    { name: 'JavaScript', icon: SiJavascript },
-    { name: 'React', icon: SiReact },
-    { name: 'Next.js', icon: SiNextdotjs },
-    { name: 'Tailwind CSS', icon: SiTailwindcss },
-    { name: 'Node.js', icon: SiNodedotjs },
-    { name: 'HTML', icon: SiHtml5 },
-    { name: 'CSS', icon: SiCss3 },
-    { name: 'Firebase', icon: SiFirebase },
-    { name: 'TypeScript', icon: SiTypescript },
-    { name: 'Git', icon: SiGit },
-    { name: 'GitHub', icon: SiGithub },
-    { name: 'Figma', icon: SiFigma },
-    { name: 'NPM', icon: SiNpm },
-    { name: 'Redux', icon: SiRedux },
-    { name: 'Prisma', icon: SiPrisma },
-    { name: 'Docker', icon: SiDocker },
+    { name: 'JavaScript', icon: 'javascript' },
+    { name: 'React', icon: 'react' },
+    { name: 'Next.js', icon: 'nextdotjs' },
+    { name: 'Tailwind CSS', icon: 'tailwindcss' },
+    { name: 'Node.js', icon: 'nodedotjs' },
+    { name: 'HTML', icon: 'html5' },
+    { name: 'CSS', icon: 'css3' },
+    { name: 'Firebase', icon: 'firebase' },
+    { name: 'TypeScript', icon: 'typescript' },
+    { name: 'Git', icon: 'git' },
+    { name: 'GitHub', icon: 'github' },
+    { name: 'Figma', icon: 'figma' },
+    { name: 'NPM', icon: 'npm' },
+    { name: 'Redux', icon: 'redux' },
+    { name: 'Prisma', icon: 'prisma' },
+    { name: 'Docker', icon: 'docker' },
   ];
 
   return (
@@ -54,7 +35,12 @@ const ToolkitDisplay = () => {
             key={index}
             className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
           >
-             {tool.icon && <SimpleIcon name={tool.icon.slug} className="h-6 w-6 text-primary" />}
+            {tool.icon && (
+              <svg className="h-6 w-6 text-primary" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <title>{tool.name} icon</title>
+                <use xlinkHref={`/simple-icons.svg#si-${tool.icon}`} />
+              </svg>
+            )}
             <span className="text-lg text-foreground mt-2">{tool.name}</span>
           </div>
         ))}
