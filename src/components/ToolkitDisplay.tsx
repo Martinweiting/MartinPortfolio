@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { Settings } from 'lucide-react';
+import {useEffect, useState} from 'react';
+import {Settings} from 'lucide-react';
 
 const ToolkitDisplay = () => {
   const tools = [
@@ -17,176 +17,81 @@ const ToolkitDisplay = () => {
     {
       name: 'React',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 21a9.004 9.004 0 008.716-4.037m-7.32 7.32A5.004 5.004 0 013.283 7.023m13.694 13.694c-.258-.89-.728-1.775-1.383-2.542M3.317 3.316c.258.89.728 1.775 1.383 2.542m13.694 13.694L3.317 3.316m0 0c.635-.635 1.684-1.019 2.657-1.019m0 0c1.057 0 2.023.416 2.783 1.079m0 0l10.252 10.259m-10.252-10.259c.635.635 1.684 1.019 2.657 1.019m0 0c1.057 0 2.023.416 2.783 1.079"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>React</title>
+          <path d="M22.479 11.574c0-5.217-8.447-9.426-14.104-9.426-.457 0-.913.028-1.363.084l1.344 2.296c.348-.047.714-.07 1.083-.07 4.073 0 7.377 3.148 7.377 7.048 0 3.9-3.304 7.048-7.377 7.048-4.073 0-7.377-3.148-7.377-7.048 0-.369.022-.735.07-.084l-1.344 2.296c.449.056.905.084 1.363.084 5.657 0 14.104-4.209 14.104-9.426zM14.104 12.433c0 1.873-1.646 3.394-3.68 3.394-2.034 0-3.68-1.521-3.68-3.394 0-1.873 1.646-3.394 3.68-3.394 2.034 0 3.68 1.521 3.68 3.394z"/>
         </svg>
       ),
     },
     {
       name: 'Next.js',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Next.js</title>
+          <path d="M12.33 14.66l4.48-7.72h-2.14l-2.34 4.03-2.34-4.03H5.52l4.48 7.72zM24 23.45H0V0h24v23.45z"/>
         </svg>
       ),
     },
     {
       name: 'Tailwind CSS',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M17.25 6.75L5.25 17.25m12 0L6.75 5.25M4.5 19.5l1.5-1.5m10.5-10.5l1.5-1.5"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Tailwind CSS</title>
+          <path d="M19.475 5.25H4.525L12 15.698zM0 3.75h24v16.5H0V3.75z"/>
         </svg>
       ),
     },
     {
       name: 'Node.js',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M18 18.72a9.094 9.094 0 003.741-.479m-3.741.479c-.3 0-.597-.03-9.215-.307m9.215.307A9.024 9.024 0 0012 15.75a9.024 9.024 0 00-6.257 2.971m9.215.307c.146-.227.3-.454.454-.681m-.454.681c-.3 1.535-1.391 2.891-3.1 3.777m3.1-3.777c.146.227.3.454.454.681m-.454-.681c-.3 1.535-1.391 2.891-3.1 3.777"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Node.js</title>
+          <path d="M12.83 2.344H11.17v19.312h1.66V2.344zM21.656 8.656h-1.656v6.688h1.656v-6.688zM2.344 8.656h1.656v6.688H2.344v-6.688zM21.656 15.344h-1.656v5.968h1.656v-5.968zM2.344 15.344h1.656v5.968H2.344v-5.968z"/>
         </svg>
       ),
     },
     {
       name: 'HTML',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 9.776c.112-.034.225-.067.338-.101l.016-.004c.197-.052.4-.1.61-.152m17.494 13.244a5.25 5.25 0 00-6.967-6.967m-1.149-1.15c.03-.111.061-.223.092-.335l.008-.015c.103-.192.21-.382.321-.57M3.75 21v-.72a2.25 2.25 0 012.25-2.25h4.5a2.25 2.25 0 012.25 2.25v.72m6.75 0v-.72a2.25 2.25 0 012.25-2.25h4.5a2.25 2.25 0 012.25 2.25v.72m-18 0l2.315-2.315c.577-.577 1.527-.577 2.104 0l.577.577m0 0a5.23 5.23 0 007.408 0l.577-.577m0 0L21.75 21m-13.378 0L12 7.621m1.122 13.379l5.16-5.16"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>HTML5</title>
+          <path d="M3.938 2.953h16.125l-1.313 14.719-6.75 1.875-6.75-1.875-1.313-14.719zm1.219.938l.907 10.125 5.906 1.64 5.906-1.64.906-10.125h-14.53zM8.25 6.563h7.5v.938h-7.5v-.938zm0 3.75h7.5v.938h-7.5v-.938zm0 3.75h5.063v.938h-5.063v-.938z"/>
         </svg>
       ),
     },
     {
       name: 'CSS',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.422.422 1.005.659 1.591.659h4.318a2.25 2.25 0 002.25-2.25V14.432c0-.597-.237-1.17-.659-1.591L9.568 3z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5.25 9.75h11.25"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>CSS3</title>
+          <path d="M3.938 2.953h16.125l-1.313 14.719-6.75 1.875-6.75-1.875-1.313-14.719zm1.219.938l.907 10.125 5.906 1.64 5.906-1.64.906-10.125h-14.53zM8.25 6.563h7.5v.938h-7.5v-.938zm0 3.75h7.5v.938h-7.5v-.938zm0 3.75h5.063v.938h-5.063v-.938z"/>
         </svg>
       ),
     },
     {
       name: 'Firebase',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12h5.25m-10.5 0h5.25"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Firebase</title>
+          <path d="M22.438 8.125c0-1.656-1.344-3-3-3-.563 0-1.094.156-1.531.438v.031l-2.719 8.969h.031l-3.844-3.5v-.031c-.469-.281-.969-.438-1.531-.438-1.656 0-3 1.344-3 3s1.344 3 3 3c.563 0 1.094-.156 1.531-.438v-.031l3.844 3.5h-.031l2.719-8.969v.031c.437.281.968.438 1.531.438 1.656 0 3-1.344 3-3zm-3.188-1.188c.281 0 .531.094.719.281v.031l-1.875 6.188h-.031l-1.094-3.625c-.187-.594-.718-1.031-1.344-1.031-.625 0-1.156.438-1.344 1.031l-1.094 3.625h.031l-1.875-6.188v-.031c.188-.187.438-.281.719-.281.75 0 1.375.625 1.563 1.406.187.781.531 1.406 1.188 1.406h.031c.656 0 1.031-.625 1.188-1.406.188-.781.813-1.406 1.563-1.406z"/>
         </svg>
       ),
     },
     {
       name: 'TypeScript',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>TypeScript</title>
+          <path d="M1.188 0h21.625l-.313 7.906h-7.438v3.187h5.875v3.313h-5.875v7.594h-.625v-7.594h-6.313v-3.313h6.313v-3.187h-5.781l-.313-7.906zm5.469 7.906h6.75v3.187h-6.75v-3.187z"/>
         </svg>
       ),
     },
     {
       name: 'Adobe Creative Cloud',
       icon: (
-        <svg
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 21a9.004 9.004 0 008.716-4.037m-7.32 7.32A5.004 5.004 0 013.283 7.023m13.694 13.694c-.258-.89-.728-1.775-1.383-2.542M3.317 3.316c.258.89.728 1.775 1.383 2.542m13.694 13.694L3.317 3.316m0 0c.635-.635 1.684-1.019 2.657-1.019m0 0c1.057 0 2.023.416 2.783 1.079m0 0l10.252 10.259m-10.252-10.259c.635.635 1.684 1.019 2.657 1.019m0 0c1.057 0 2.023.416 2.783 1.079"
-          />
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <title>Adobe Creative Cloud</title>
+          <path d="M15.124 12.719l-3.219-9.765h-.094l-3.25 9.765h-.031l-3.719-11.219h2.844l2.375 7.125h.062l2.281-7.125h2.688l2.25 7.125h.094l2.344-7.125h2.844l-3.719 11.219zm-.25 8.734h-5.719v-17.469h5.719v17.469z"/>
         </svg>
       ),
     },
@@ -196,7 +101,7 @@ const ToolkitDisplay = () => {
     <section className="py-12">
       <h2 className="text-3xl font-semibold text-accent mb-6 flex items-center gap-2">
         My Toolkit
-        <Settings className="h-6 w-6 text-muted-foreground" />
+        <Settings className="h-6 w-6 text-muted-foreground"/>
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {tools.map((tool, index) => {
