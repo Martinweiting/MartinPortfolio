@@ -27,7 +27,7 @@ const Hero = () => {
           <h1 className="text-4xl font-bold text-primary">
             Hello! I'm Martin. 👋
           </h1>
-          <p className="text-lg mt-2 text-foreground">
+          <p className="text-lg mt-2 text-foreground text-muted-foreground">
             A front-end engineer with an education background, curious mind,
             and a passion for crafting thoughtful, intuitive web experiences. ✨
           </p>
