@@ -5,7 +5,7 @@ const AboutMe = () => {
       <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">About Me</h2>
       <div className="flex flex-col sm:flex-col md:flex-row gap-6 items-center">
         <img
-          src="https://picsum.photos/400/300"
+          src="https://picsum.photos/500/400"
           alt="About Me"
           className="rounded-lg shadow-md w-full md:w-1/3"
           width={400}
