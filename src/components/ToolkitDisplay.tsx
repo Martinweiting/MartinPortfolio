@@ -1,12 +1,21 @@
-
-import { SiReact, SiNextdotjs, SiTailwindcss, SiJavascript } from 'simple-icons-react';
+import {
+  BadgeCheck,
+  LayoutDashboard,
+  LucideIcon,
+  MoveRight,
+  Rocket,
+  ServerCog,
+  Sparkles,
+  Terminal,
+  Wand2,
+} from 'lucide-react';
 
 const ToolkitDisplay = () => {
   const tools = [
-    { name: 'React', icon: SiReact, color: '#61DAFB' },
-    { name: 'Next.js', icon: SiNextdotjs, color: '#000000' },
-    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#38B2AC' },
-    { name: 'JavaScript', icon: SiJavascript, color: '#F7DF1E' },
+    {name: 'React', icon: Sparkles, color: '#61DAFB'},
+    {name: 'Next.js', icon: LayoutDashboard, color: '#000000'},
+    {name: 'Tailwind CSS', icon: Terminal, color: '#38B2AC'},
+    {name: 'JavaScript', icon: BadgeCheck, color: '#F7DF1E'},
   ];
 
   return (
