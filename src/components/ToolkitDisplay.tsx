@@ -3,17 +3,17 @@
 import { useEffect, useState } from 'react';
 import { Settings } from 'lucide-react';
 import {
-  SiJavascript,
-  SiReact,
-  SiNextdotjs,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiHtml5,
-  SiCss3,
-  SiFirebase,
-  SiTypescript,
-  SiAdobecreativecloud,
-} from 'simple-icons';
+  javascript as SiJavascript,
+  react as SiReact,
+  nextdotjs as SiNextdotjs,
+  tailwindcss as SiTailwindcss,
+  nodedotjs as SiNodedotjs,
+  html5 as SiHtml5,
+  css3 as SiCss3,
+  firebase as SiFirebase,
+  typescript as SiTypescript,
+  adobecreativecloud as SiAdobecreativecloud,
+} from 'simple-icons/icons';
 
 const ToolkitDisplay = () => {
   const tools = [
