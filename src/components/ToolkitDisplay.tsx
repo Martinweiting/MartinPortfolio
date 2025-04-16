@@ -2,8 +2,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Settings } from 'lucide-react';
-
 import {
   SiJavascript,
   SiReact,
@@ -16,6 +14,7 @@ import {
   SiTypescript,
   SiAdobecreativecloud,
 } from 'react-icons/si';
+import { Settings } from 'lucide-react';
 
 const ToolkitDisplay = () => {
   const tools = [
@@ -65,7 +64,6 @@ const ToolkitDisplay = () => {
     <section className="py-12">
       <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
         My Toolkit
-        <Settings className="h-6 w-6 text-muted-foreground" />
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {tools.map((tool, index) => {

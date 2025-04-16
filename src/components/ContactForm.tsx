@@ -3,7 +3,6 @@
 
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { Mail } from 'lucide-react';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { Textarea } from '@/components/ui/textarea';
 
@@ -15,7 +14,7 @@ const ContactForm = () => {
           {/* Left side: Contact Information */}
           <div className="md:w-1/2 text-center md:text-left">
             <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2">
-              Let's Connect! <Mail className="h-6 w-6 text-muted-foreground" />
+              Let's Connect!
             </h2>
             <p className="text-lg text-foreground mb-6">
               Feel free to reach out — whether it's for a collaboration, a question, or just a friendly hello!
