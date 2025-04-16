@@ -1,49 +1,74 @@
+'use client';
+
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Mail } from 'lucide-react';
+import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 const ContactForm = () => {
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-semibold text-accent mb-6">Contact Me</h2>
+      <div className="flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-semibold text-accent mb-4 flex items-center gap-2">
+          Let's Connect! <Mail className="h-6 w-6 text-muted-foreground" />
+        </h2>
+        <p className="text-lg text-foreground mb-6 text-center">
+          Feel free to reach out — whether it's for a collaboration, a question, or just a friendly hello!
+        </p>
+        <div className="flex gap-4 mb-6">
+          <a href="#" className="text-foreground hover:text-primary">
+            <FaLinkedin size={24} />
+          </a>
+          <a href="#" className="text-foreground hover:text-primary">
+            <FaInstagram size={24} />
+          </a>
+          <a href="#" className="text-foreground hover:text-primary">
+            <FaGithub size={24} />
+          </a>
+        </div>
+      </div>
+
       <form className="max-w-lg mx-auto">
         <div className="mb-4">
-          <label htmlFor="name" className="block text-foreground text-sm font-bold mb-2">
+          <label htmlFor="name" className="block text-foreground text-sm font-bold mb-2 sr-only">
             Name
           </label>
-          <input
+          <Input
             type="text"
             id="name"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Your Name"
+            placeholder="Name"
           />
         </div>
         <div className="mb-4">
-          <label htmlFor="email" className="block text-foreground text-sm font-bold mb-2">
+          <label htmlFor="email" className="block text-foreground text-sm font-bold mb-2 sr-only">
             Email
           </label>
-          <input
+          <Input
             type="email"
             id="email"
             className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Your Email"
+            placeholder="Email"
           />
         </div>
         <div className="mb-6">
-          <label htmlFor="message" className="block text-foreground text-sm font-bold mb-2">
+          <label htmlFor="message" className="block text-foreground text-sm font-bold mb-2 sr-only">
             Message
           </label>
           <textarea
             id="message"
             rows={4}
             className="shadow appearance-none border rounded w-full py-2 px-3 text-foreground leading-tight focus:outline-none focus:shadow-outline"
-            placeholder="Your Message"
+            placeholder="Message"
           />
         </div>
-        <div className="flex items-center justify-between">
-          <button
+        <div className="flex items-center justify-center">
+          <Button
             className="bg-primary hover:bg-accent text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Send Message
-          </button>
+          </Button>
         </div>
       </form>
     </section>
