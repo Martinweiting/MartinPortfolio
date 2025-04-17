@@ -1,6 +1,3 @@
-Here’s a draft for your GitHub project `README.md` that introduces your personal website project:
-
-```markdown
 # My Personal Website
 
 Welcome to my personal website project! This website showcases who I am, the projects I work on, and the tools I use to bring my ideas to life. Below you'll find an overview of each section of the site and what you can expect from them.
