@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-48 mt-24">
+    <section className="w-full flex flex-col items-center justify-center py-48 mt-48">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
@@ -51,7 +51,7 @@ const Hero = () => {
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 1, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse'}}
-          className="mt-24 text-primary"
+          className="mt-48 text-primary"
         >
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </motion.div>
