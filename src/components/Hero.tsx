@@ -34,17 +34,12 @@ const Hero = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
-            <h1 className="relative text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }} ref={textRef}>
-              Hello! I'm Martin. 👋
-              <span
-                className="absolute bottom-0 left-0 h-3 rounded-full -z-10"
-                style={{
-                  paddingBottom: '0.25rem',
-                  width: `${textWidth}px`,
-                  backgroundColor: 'rgba(155, 199, 243, 0.3)',
-                }}
-              />
-            </h1>
+          <h1 className="text-4xl font-bold" style={{ fontFamily: 'Caveat Brush' }}>
+  <span className="relative inline-block text-[#9BC7F3]">
+    <span className="relative z-10">Hello! I'm Martin. 👋</span>
+    <span className="absolute left-0 bottom-0 w-full h-3 bg-[#9BC7F3]/30 rounded-full -z-10" />
+  </span>
+</h1>
             <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
               A front-end engineer with an education background, curious mind,
               and a passion for crafting thoughtful, intuitive web experiences. ✨

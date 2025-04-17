@@ -8,7 +8,7 @@ const AboutMe = () => {
   return (
     <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">About Me</h2>
+        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">About Me 📖</h2>
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <img
             src="https://picsum.photos/500/400"

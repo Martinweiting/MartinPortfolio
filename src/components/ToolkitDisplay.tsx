@@ -73,7 +73,7 @@ const ToolkitDisplay = () => {
     <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
-          My Toolkit
+          My Toolkit ⚙️
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {tools.map((tool, index) => {
