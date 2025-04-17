@@ -51,7 +51,7 @@ const ProjectShowcase = () => {
   return (
     <section className="w-full py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
+        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6" style={{ fontFamily: 'Caveat Brush' }}>
           Project Showcase 💻
         </h2>
         <div className="flex flex-col gap-6">
@@ -103,11 +103,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
         alt={project.title}
         width={isFeatured ? 800 : 600}
         height={isFeatured ? 400 : 400}
-        className={`w-full object-cover ${isFeatured ? 'h-72' : 'h-52'}`}
+        className={`w-full object-cover ${isFeatured ? 'h-48' : 'h-52'}`}
         style={{height: 'auto'}}
       />
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <h3 className="text-xl font-semibold">{project.title}</h3>
+        <h3 className="text-xl font-semibold" style={{ fontFamily: 'Caveat Brush' }}>{project.title}</h3>
         <p className="text-md">{project.description}</p>
         <div className="flex gap-2">
           {project.techStack.map((tech, index) => (
