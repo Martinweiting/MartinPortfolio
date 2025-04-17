@@ -13,7 +13,7 @@ const AboutMe = () => {
           <img
             src="https://picsum.photos/500/400"
             alt="About Me"
-            className={`rounded-lg shadow-md w-1/4 h-[300px] object-cover transition-transform duration-300 ${
+            className={`rounded-lg shadow-md w-1/3 h-[300px] object-cover transition-transform duration-300 ${
               isHovered ? 'scale-105' : ''
             }`}
             width={400}
@@ -22,9 +22,9 @@ const AboutMe = () => {
             onMouseLeave={() => setIsHovered(false)}
           />
           <div className="text-lg text-foreground text-center md:text-left w-2/3 flex flex-col gap-4">
-            <p>Hello again! Thanks for scrolling this far! I enjoy working with React, Node.js, and experimenting with LLM prompt engineering to create smarter interactions.</p>
-            <p>Outside of coding, I spend time exploring AI concepts and browsing GitHub for projects that can be applied to daily life — anything that can make life a little easier or more efficient.</p>
-            <p>I'm currently seeking new opportunities — feel free to reach out if you're interested in working together!</p>
+            <p className="text-muted-foreground">Hello again! Thanks for scrolling this far! I enjoy working with React, Node.js, and experimenting with LLM prompt engineering to create smarter interactions.</p>
+            <p className="text-muted-foreground">Outside of coding, I spend time exploring AI concepts and browsing GitHub for projects that can be applied to daily life — anything that can make life a little easier or more efficient.</p>
+            <p className="text-muted-foreground">I'm currently seeking new opportunities — feel free to reach out if you're interested in working together!</p>
           </div>
         </div>
       </div>
