@@ -10,7 +10,7 @@ const ProjectShowcase = () => {
       title: 'Pet Adoption Website',
       description:
         'Connect, adopt, and care — your gateway to a better life for pets.',
-      image: 'https://picsum.photos/600/400',
+      image: 'https://picsum.photos/600/300',
       githubLink: 'https://github.com/example',
       demoLink: 'https://pet-adoption-website.example.com',
       techStack: ['Next.js', 'React', 'Bootstrap'],
@@ -19,7 +19,7 @@ const ProjectShowcase = () => {
     {
       title: 'Framed Perspectives',
       description: 'Capture the moment — storytelling through light, lens, and emotion.',
-      image: 'https://picsum.photos/600/400',
+      image: 'https://picsum.photos/600/300',
       githubLink: 'https://github.com/example2',
       demoLink: 'https://framed-perspectives.example.com',
       techStack: ['Next.js', 'React', 'Windsurf'],
@@ -28,7 +28,7 @@ const ProjectShowcase = () => {
     {
       title: 'MiniGame Arcade',
       description: 'Quick to start — challenge your reflexes and beat your best score!',
-      image: 'https://picsum.photos/600/400',
+      image: 'https://picsum.photos/600/300',
       githubLink: 'https://github.com/example3',
       demoLink: 'https://minigame-arcade.example.com',
       techStack: ['Next.js', 'React', 'Windsurf'],
@@ -37,7 +37,7 @@ const ProjectShowcase = () => {
     {
       title: 'Project 4',
       description: 'A brief description of project 4.',
-      image: 'https://picsum.photos/600/400',
+      image: 'https://picsum.photos/600/300',
       githubLink: 'https://github.com/example4',
       demoLink: 'https://project4.example.com',
       techStack: [],
@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
   const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
 
   return (
-    <section className="w-full py-8">
+    <section className="w-full py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2
           className="text-3xl font-semibold text-[#9BC7F3] mb-6"
@@ -103,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
     >
       <div style={{ height: '200px', overflow: 'hidden' }}>
         <Image
-          src={project.image}
+          src={project.image || "https://picsum.photos/600/300"}
           alt={project.title}
           width={isFeatured ? 800 : 600}
           height={isFeatured ? 400 : 400}
