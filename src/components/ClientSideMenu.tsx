@@ -15,7 +15,7 @@ const ClientSideMenu = () => {
     <>
       <button
         onClick={toggleMenu}
-        className="sm:hidden text-[#9BC7F3] fixed top-4 right-4 focus:outline-none z-50"
+        className="text-[#9BC7F3] fixed top-4 right-4 focus:outline-none z-50"
         aria-label="Open menu"
       >
         <Menu className="h-6 w-6" />
@@ -45,19 +45,6 @@ const ClientSideMenu = () => {
           </nav>
         </div>
       )}
-
-      {/* Desktop Menu */}
-      <nav className="hidden sm:flex space-x-6">
-        <Link href="#project-showcase" className="text-foreground hover:text-accent-foreground">
-          Projects
-        </Link>
-        <Link href="#about-me" className="text-foreground hover:text-accent-foreground">
-          About Me
-        </Link>
-        <Link href="#contact-form" className="text-foreground hover:text-accent-foreground">
-          Contact
-        </Link>
-      </nav>
     </>
   );
 };
