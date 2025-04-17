@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
 import Image from 'next/image';
 
 const ProjectShowcase = () => {
@@ -45,16 +45,27 @@ const ProjectShowcase = () => {
     },
   ];
 
+  const featuredProject = projects.find(project => project.isFeatured);
+  const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
+
   return (
     <section className="w-full py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
-          ))}
+        <div className="flex flex-col gap-6">
+          {/* Featured Project */}
+          {featuredProject && (
+            <ProjectCard project={featuredProject} isFeatured />
+          )}
+
+          {/* Secondary Projects */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {secondaryProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
@@ -71,9 +82,10 @@ interface ProjectCardProps {
     techStack: string[];
     isFeatured: boolean;
   };
+  isFeatured?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const cardClasses = `rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${
@@ -89,10 +101,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <Image
         src={project.image}
         alt={project.title}
-        width={400}
-        height={300}
+        width={isFeatured ? 800 : 600}
+        height={isFeatured ? 400 : 400}
         className="w-full h-48 object-cover"
-        style={{ height: 'auto' }}
+        style={{height: 'auto'}}
       />
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -122,5 +134,3 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 };
 
 export default ProjectShowcase;
-
-    
