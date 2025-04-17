@@ -22,14 +22,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-48">
+    <section className="w-full flex flex-col items-center justify-center py-48 mt-24">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
-            <h1 className="text-4xl font-bold text-[#9BC7F3]">
+            <h1 className="text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>
               Hello! I'm Martin. 👋
             </h1>
-            <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'DM Serif Text', color: 'grey' }}>
+            <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
               A front-end engineer with an education background, curious mind,
               and a passion for crafting thoughtful, intuitive web experiences. ✨
             </p>
@@ -51,7 +51,7 @@ const Hero = () => {
           initial={{opacity: 0, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 1, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse'}}
-          className="mt-12 text-primary"
+          className="mt-24 text-primary"
         >
           <ChevronDown className="w-6 h-6 animate-bounce" />
         </motion.div>
