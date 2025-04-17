@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
   const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
         <h2
           className="text-3xl font-semibold text-[#9BC7F3] mb-6"
@@ -108,7 +108,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
           width={isFeatured ? 800 : 600}
           height={isFeatured ? 400 : 400}
           className={`w-full object-cover`}
-          style={{height: '100%'}}
+          style={{height: '200px'}}
         />
       </div>
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
