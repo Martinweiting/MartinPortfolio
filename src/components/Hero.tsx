@@ -40,7 +40,7 @@ const Hero = () => {
     <span className="absolute left-0 bottom-0 w-full h-3 bg-[#9BC7F3]/30 rounded-full -z-10" />
   </span>
 </h1>
-            <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
+            <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{  color: 'grey' }}>
             Currently enjoying building intuitive web experiences and exploring new ideas in tech. Open to opportunities across the industry — always excited to build things that matter. ✨
             </p>
           </div>
