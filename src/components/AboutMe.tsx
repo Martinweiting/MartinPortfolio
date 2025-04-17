@@ -7,7 +7,7 @@ const AboutMe = () => {
         <img
           src="https://picsum.photos/500/400"
           alt="About Me"
-          className="rounded-lg shadow-md w-full md:w-1/3"
+          className="rounded-lg shadow-md w-full md:w-1/3 h-[300px] object-cover"
           width={400}
           height={300}
         />
