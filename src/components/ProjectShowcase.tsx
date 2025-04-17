@@ -33,7 +33,7 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <section className="py-12 px-6 md:px-16 lg:px-24">
+    <section className="py-12">
       <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
         Project Showcase 💻
       </h2>

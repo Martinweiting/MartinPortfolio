@@ -1,7 +1,7 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Settings } from 'lucide-react';
 import {
   SiJavascript,
   SiReact,
@@ -14,7 +14,6 @@ import {
   SiTypescript,
   SiAdobecreativecloud,
 } from 'react-icons/si';
-import { Settings } from 'lucide-react';
 
 const ToolkitDisplay = () => {
   const tools = [
