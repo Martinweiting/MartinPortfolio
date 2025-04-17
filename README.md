@@ -1,6 +1,5 @@
 # My Personal Website
 
-## Intro and Online Link
 <div align="center">
         <br/>
         <a href="https://martin-portfolio-gules.vercel.app/">
