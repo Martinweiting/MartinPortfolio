@@ -2,6 +2,7 @@
 <div align="center">
         <a href="https://martin-portfolio-gules.vercel.app/">
             Martin's Portfolio
+            <br>
         </a>
 </div>
 Welcome to my personal website project! This website showcases who I am, the projects I work on, and the tools I use to bring my ideas to life. Below you'll find an overview of each section of the site and what you can expect from them.
