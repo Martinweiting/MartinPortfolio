@@ -13,6 +13,8 @@ import {
   SiFirebase,
   SiTypescript,
   SiAdobecreativecloud,
+  SiJquery,
+  SiMysql,
 } from 'react-icons/si';
 
 const ToolkitDisplay = () => {
@@ -56,6 +58,14 @@ const ToolkitDisplay = () => {
     {
       name: 'Adobe Creative Cloud',
       icon: <SiAdobecreativecloud size={24} color="#ADD8E6" />,
+    },
+        {
+      name: 'jQuery',
+      icon: <SiJquery size={24} color="#ADD8E6" />,
+    },
+    {
+      name: 'MySQL',
+      icon: <SiMysql size={24} color="#ADD8E6" />,
     },
   ];
 
