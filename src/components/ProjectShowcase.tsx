@@ -51,7 +51,7 @@ const ProjectShowcase = () => {
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -82,15 +82,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <div
-      className={`${cardClasses} ${project.isFeatured ? 'md:col-span-2' : ''}`}
+      className={cardClasses}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <Image
         src={project.image}
         alt={project.title}
-        width={project.isFeatured ? 800 : 400}
-        height={project.isFeatured ? 400 : 300}
+        width={400}
+        height={300}
         className="w-full h-48 object-cover"
         style={{ height: 'auto' }}
       />
@@ -122,3 +122,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 };
 
 export default ProjectShowcase;
+
+    
