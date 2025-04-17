@@ -18,7 +18,7 @@ const ClientSideMenu = () => {
         className="text-[#9BC7F3] fixed top-4 right-4 focus:outline-none z-50"
         aria-label="Open menu"
       >
-        <Menu className="h-6 w-6" />
+        <Menu className="h-8 w-8" />
       </button>
 
       {/* Mobile Menu */}
@@ -30,7 +30,7 @@ const ClientSideMenu = () => {
             className="absolute top-4 right-4 text-foreground focus:outline-none"
             aria-label="Close menu"
           >
-            <X className="h-8 w-8" />
+            <X className="h-10 w-10" />
           </button>
           <nav className="flex flex-col items-center space-y-6">
             <Link href="#project-showcase" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
