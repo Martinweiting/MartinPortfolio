@@ -15,7 +15,7 @@ const ClientSideMenu = () => {
     <>
       <button
         onClick={toggleMenu}
-        className="sm:hidden text-foreground focus:outline-none"
+        className="sm:hidden text-[#9BC7F3] fixed top-4 right-4 focus:outline-none z-50"
         aria-label="Open menu"
       >
         <Menu className="h-6 w-6" />
