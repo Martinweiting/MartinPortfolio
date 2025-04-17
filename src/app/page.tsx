@@ -15,12 +15,12 @@ export default function Home() {
       </section>
 
       {/* Project Showcase Section */}
-      <section className="w-full">
+      <section className="w-full" id="project-showcase">
         <ProjectShowcase />
       </section>
 
       {/* About Me Section */}
-      <section className="w-full">
+      <section className="w-full" id="about-me">
         <AboutMe />
       </section>
 
@@ -30,7 +30,7 @@ export default function Home() {
       </section>
 
       {/* Contact Form Section */}
-      <section className="w-full">
+      <section className="w-full" id="contact-form">
         <ContactForm />
       </section>
     </div>

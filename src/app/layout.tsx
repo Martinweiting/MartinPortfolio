@@ -1,6 +1,9 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import Footer from '@/components/Footer';
+import {Menu} from 'lucide-react';
+import Link from 'next/link';
+import {useState} from 'react';
 
 export const metadata: Metadata = {
   title: 'Martin\'s Portfolio',
@@ -12,9 +15,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <html lang="en">
-      <body className="">
+      <body className="relative">
+        <header className="sticky top-0 bg-background z-10">
+          <div className="max-w-6xl mx-auto px-4 py-2 flex justify-end items-center">
+            <button
+              onClick={toggleMenu}
+              className="sm:hidden text-foreground focus:outline-none"
+              aria-label="Open menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="sm:hidden absolute top-full right-0 bg-[#B0E2FF] w-60 rounded-md shadow-md py-2 z-20">
+              <Link href="#project-showcase" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+                Projects
+              </Link>
+              <Link href="#about-me" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+                About Me
+              </Link>
+              <Link href="#contact-form" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+                Contact
+              </Link>
+            </div>
+          )}
+        </header>
         {children}
         <Footer />
       </body>
