@@ -2,11 +2,13 @@
 
 import {motion} from 'framer-motion';
 import {ChevronDown} from 'lucide-react';
-import {useEffect, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import Image from 'next/image';
 
 const Hero = () => {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
+  const textRef = useRef<HTMLHeadingElement>(null);
+  const [textWidth, setTextWidth] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,16 +23,26 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (textRef.current) {
+      setTextWidth(textRef.current.offsetWidth);
+    }
+  }, [textRef.current]);
+
   return (
     <section className="w-full flex flex-col items-center justify-center py-64 mt-48">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
-            <h1 className="relative text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>
+            <h1 className="relative text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }} ref={textRef}>
               Hello! I'm Martin. 👋
               <span
-                className="absolute -bottom-1 left-0 w-full h-3 bg-[#9BC7F3]/30 rounded-full -z-10"
-                style={{paddingBottom: '0.25rem'}}
+                className="absolute bottom-0 left-0 h-3 rounded-full -z-10"
+                style={{
+                  paddingBottom: '0.25rem',
+                  width: `${textWidth}px`,
+                  backgroundColor: 'rgba(155, 199, 243, 0.3)',
+                }}
               />
             </h1>
             <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
