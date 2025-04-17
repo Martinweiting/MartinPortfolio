@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
   const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻

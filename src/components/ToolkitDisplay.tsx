@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { Settings } from 'lucide-react';
+import {useEffect, useState} from 'react';
+import {Settings} from 'lucide-react';
 import {
   SiJavascript,
   SiReact,
@@ -70,7 +70,7 @@ const ToolkitDisplay = () => {
   ];
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full py-8">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
           My Toolkit

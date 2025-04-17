@@ -10,31 +10,29 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="w-full py-12">
+      <section className="w-full">
         <Hero />
       </section>
 
       {/* Project Showcase Section */}
-      <section className="w-full py-12">
+      <section className="w-full">
         <ProjectShowcase />
       </section>
 
       {/* About Me Section */}
-      <section className="w-full py-12">
+      <section className="w-full">
         <AboutMe />
       </section>
 
       {/* Toolkit Display Section */}
-      <section className="w-full py-12">
+      <section className="w-full">
         <ToolkitDisplay />
       </section>
 
       {/* Contact Form Section */}
-      <section className="w-full py-12">
+      <section className="w-full">
         <ContactForm />
       </section>
     </div>
   );
 }
-
-
