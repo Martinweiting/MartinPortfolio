@@ -46,11 +46,11 @@ const Hero = () => {
           </div>
           <div className="sm:w-1/2 flex justify-end">
             <Image
-              src="https://picsum.photos/300/300"
+              src="/images/5.jpg"
               alt="Profile"
-              className="rounded-full w-56 h-56 object-cover shadow-md"
-              width={300}
-              height={300}
+              className="rounded-full w-72 h-72 object-cover shadow-md"
+              width={500}
+              height={500}
               style={{objectFit: 'cover'}}
             />
           </div>

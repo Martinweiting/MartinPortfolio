@@ -10,7 +10,7 @@ const ProjectShowcase = () => {
       title: 'Pet Adoption Website',
       description:
         'Connect, adopt, and care — your gateway to a better life for pets.',
-      image: 'https://picsum.photos/600/300',
+      image: '/images/1.jpg',
       githubLink: 'https://github.com/example',
       demoLink: 'https://pet-adoption-website.example.com',
       techStack: ['Next.js', 'React', 'Bootstrap'],
@@ -19,19 +19,19 @@ const ProjectShowcase = () => {
     {
       title: 'Framed Perspectives',
       description: 'Capture the moment — storytelling through light, lens, and emotion.',
-      image: 'https://picsum.photos/600/300',
+      image: '/images/2.jpg',
       githubLink: 'https://github.com/example2',
       demoLink: 'https://framed-perspectives.example.com',
-      techStack: ['Next.js', 'React', 'Windsurf'],
+      techStack: ['Next.js', 'React', 'Tailwind CSS'],
       isFeatured: false,
     },
     {
       title: 'MiniGame Arcade',
       description: 'Quick to start — challenge your reflexes and beat your best score!',
-      image: 'https://picsum.photos/600/300',
+      image: '/images/3.jpg',
       githubLink: 'https://github.com/example3',
       demoLink: 'https://minigame-arcade.example.com',
-      techStack: ['Next.js', 'React', 'Windsurf'],
+      techStack: ['TypeScript', 'Three.js', 'WebSocket'],
       isFeatured: false,
     },
     {

@@ -11,7 +11,7 @@ const AboutMe = () => {
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">About Me 📖</h2>
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <img
-            src="https://picsum.photos/500/400"
+            src="/images/4.jpg"
             alt="About Me"
             className={`rounded-lg shadow-md w-1/4 h-[300px] object-cover transition-transform duration-300 ${
               isHovered ? 'scale-105' : ''
