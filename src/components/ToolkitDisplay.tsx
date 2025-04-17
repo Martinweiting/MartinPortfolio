@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -59,7 +60,7 @@ const ToolkitDisplay = () => {
       name: 'Adobe Creative Cloud',
       icon: <SiAdobecreativecloud size={24} color="#ADD8E6" />,
     },
-        {
+    {
       name: 'jQuery',
       icon: <SiJquery size={24} color="#ADD8E6" />,
     },
@@ -83,7 +84,7 @@ const ToolkitDisplay = () => {
                 className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
               >
                 <div className="h-6 w-6 text-foreground">{tool.icon}</div>
-                <span className="text-lg text-foreground mt-2">{tool.name}</span>
+                <span className="text-lg text-foreground mt-2" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>{tool.name}</span>
               </div>
             );
           })}
@@ -94,3 +95,4 @@ const ToolkitDisplay = () => {
 };
 
 export default ToolkitDisplay;
+
