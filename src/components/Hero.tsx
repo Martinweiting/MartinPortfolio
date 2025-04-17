@@ -22,12 +22,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-48 mt-48">
+    <section className="w-full flex flex-col items-center justify-center py-64 mt-48">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
-            <h1 className="text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>
+            <h1 className="relative text-4xl font-bold text-[#9BC7F3]" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>
               Hello! I'm Martin. 👋
+              <span
+                className="absolute -bottom-1 left-0 w-full h-3 bg-[#9BC7F3]/30 rounded-full -z-10"
+                style={{paddingBottom: '0.25rem'}}
+              />
             </h1>
             <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
               A front-end engineer with an education background, curious mind,
