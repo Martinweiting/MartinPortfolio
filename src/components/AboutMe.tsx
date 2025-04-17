@@ -21,13 +21,11 @@ const AboutMe = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           />
-          <p className="text-lg text-foreground text-center md:text-left w-2/3">
-            I am a web developer with a focus on creating user-friendly and
-            efficient web applications. My expertise includes front-end
-            development with React and Next.js, as well as back-end development
-            with Node.js and Express. I am always eager to learn new technologies
-            and improve my skills.
-          </p>
+          <div className="text-lg text-foreground text-center md:text-left w-2/3 flex flex-col gap-4">
+            <p>Hello again! Thanks for scrolling this far! I enjoy working with React, Node.js, and experimenting with LLM prompt engineering to create smarter interactions.</p>
+            <p>Outside of coding, I spend time exploring AI concepts and browsing GitHub for projects that can be applied to daily life — anything that can make life a little easier or more efficient.</p>
+            <p>I'm currently seeking new opportunities — feel free to reach out if you're interested in working together!</p>
+          </div>
         </div>
       </div>
     </section>
