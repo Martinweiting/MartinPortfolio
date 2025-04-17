@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -84,7 +83,7 @@ const ToolkitDisplay = () => {
                 className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
               >
                 <div className="h-6 w-6 text-foreground">{tool.icon}</div>
-                <span className="text-lg text-foreground mt-2" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>{tool.name}</span>
+                <span className="text-lg text-muted-foreground mt-2" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>{tool.name}</span>
               </div>
             );
           })}
@@ -95,4 +94,3 @@ const ToolkitDisplay = () => {
 };
 
 export default ToolkitDisplay;
-
