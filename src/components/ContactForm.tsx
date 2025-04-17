@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="w-full py-8" style={{ backgroundColor: '#0F4C81' }}>
+    <section className="w-full py-8" style={{ backgroundColor: '#9BC7F3' }}>
       <div className="max-w-6xl mx-auto md:flex md:items-start md:justify-between gap-8 px-4">
         {/* Left side: Contact Information */}
         <div className="md:w-1/2 text-center md:text-left">
@@ -18,7 +18,7 @@ const ContactForm = () => {
             Feel free to reach out — whether it's for a collaboration, a question, or just a friendly hello!
           </p>
           <div className="flex justify-center md:justify-start gap-4 mb-6">
-            <a href="www.linkedin.com/in/wuweiting-166782288" className="hover:text-primary text-[#9BC7F3]">
+            <a href="https://www.linkedin.com/in/wuweiting-166782288" className="hover:text-primary text-[#9BC7F3]">
               <FaLinkedin size={24} color="white" />
             </a>
             <a href="https://www.instagram.com/0225mar_tin/" className="hover:text-primary text-[#9BC7F3]">
