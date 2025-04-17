@@ -33,13 +33,13 @@ const ClientSideMenu = () => {
             <X className="h-8 w-8" />
           </button>
           <nav className="flex flex-col items-center space-y-6">
-            <Link href="#project-showcase" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+            <Link href="#project-showcase" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
               Projects
             </Link>
-            <Link href="#about-me" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+            <Link href="#about-me" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
               About Me
             </Link>
-            <Link href="#contact-form" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+            <Link href="#contact-form" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
               Contact
             </Link>
           </nav>
