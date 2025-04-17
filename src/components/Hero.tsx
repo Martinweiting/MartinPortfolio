@@ -34,7 +34,7 @@ const Hero = () => {
               and a passion for crafting thoughtful, intuitive web experiences. ✨
             </p>
           </div>
-          <div className="sm:w-1/2 flex justify-center">
+          <div className="sm:w-1/2 flex justify-end">
             <Image
               src="https://picsum.photos/300/300"
               alt="Profile"

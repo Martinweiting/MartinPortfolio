@@ -103,8 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
         alt={project.title}
         width={isFeatured ? 800 : 600}
         height={isFeatured ? 400 : 400}
-        className="w-full h-48 object-cover"
-        style={{height: 'auto'}}
+        className={`w-full object-cover ${isFeatured ? 'h-72' : 'h-52'}`}
       />
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-semibold">{project.title}</h3>
