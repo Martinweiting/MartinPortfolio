@@ -11,8 +11,8 @@ const ProjectShowcase = () => {
       description:
         'Connect, adopt, and care — your gateway to a better life for pets.',
       image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
+      githubLink: 'https://github.com/example',
+      demoLink: 'https://pet-adoption-website.example.com',
       techStack: ['Next.js', 'React', 'Bootstrap'],
       isFeatured: true,
     },
@@ -20,8 +20,8 @@ const ProjectShowcase = () => {
       title: 'Framed Perspectives',
       description: 'Capture the moment — storytelling through light, lens, and emotion.',
       image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
+      githubLink: 'https://github.com/example2',
+      demoLink: 'https://framed-perspectives.example.com',
       techStack: ['Next.js', 'React', 'Windsurf'],
       isFeatured: false,
     },
@@ -29,8 +29,8 @@ const ProjectShowcase = () => {
       title: 'MiniGame Arcade',
       description: 'Quick to start — challenge your reflexes and beat your best score!',
       image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
+      githubLink: 'https://github.com/example3',
+      demoLink: 'https://minigame-arcade.example.com',
       techStack: ['Next.js', 'React', 'Windsurf'],
       isFeatured: false,
     },
@@ -38,8 +38,8 @@ const ProjectShowcase = () => {
       title: 'Project 4',
       description: 'A brief description of project 4.',
       image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
+      githubLink: 'https://github.com/example4',
+      demoLink: 'https://project4.example.com',
       techStack: [],
       isFeatured: false,
     },
@@ -49,7 +49,7 @@ const ProjectShowcase = () => {
   const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
 
   return (
-    <section className="w-full py-8">
+    <section className="w-full py-12">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻
@@ -104,6 +104,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
         width={isFeatured ? 800 : 600}
         height={isFeatured ? 400 : 400}
         className={`w-full object-cover ${isFeatured ? 'h-72' : 'h-52'}`}
+        style={{height: 'auto'}}
       />
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-semibold">{project.title}</h3>
