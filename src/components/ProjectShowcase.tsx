@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const ProjectShowcase = () => {
   const projects = [
@@ -13,6 +14,7 @@ const ProjectShowcase = () => {
       githubLink: '#',
       demoLink: '#',
       techStack: ['Next.js', 'React', 'Bootstrap'],
+      isFeatured: true,
     },
     {
       title: 'Project 2',
@@ -21,6 +23,7 @@ const ProjectShowcase = () => {
       githubLink: '#',
       demoLink: '#',
       techStack: [],
+      isFeatured: false,
     },
     {
       title: 'Project 3',
@@ -29,6 +32,7 @@ const ProjectShowcase = () => {
       githubLink: '#',
       demoLink: '#',
       techStack: [],
+      isFeatured: false,
     },
     {
       title: 'Project 4',
@@ -37,22 +41,7 @@ const ProjectShowcase = () => {
       githubLink: '#',
       demoLink: '#',
       techStack: [],
-    },
-    {
-      title: 'Project 5',
-      description: 'A brief description of project 5.',
-      image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
-      techStack: [],
-    },
-    {
-      title: 'Project 6',
-      description: 'A brief description of project 6.',
-      image: 'https://picsum.photos/600/400',
-      githubLink: '#',
-      demoLink: '#',
-      techStack: [],
+      isFeatured: false,
     },
   ];
 
@@ -62,7 +51,7 @@ const ProjectShowcase = () => {
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻
         </h2>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}
@@ -80,24 +69,30 @@ interface ProjectCardProps {
     githubLink: string;
     demoLink: string;
     techStack: string[];
+    isFeatured: boolean;
   };
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
+  const cardClasses = `rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${
+    isHovered ? 'scale-105' : ''
+  } `;
+
   return (
     <div
-      className={`rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${
-        isHovered ? 'scale-105' : ''
-      }`}
+      className={`${cardClasses} ${project.isFeatured ? 'md:col-span-2' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <img
+      <Image
         src={project.image}
         alt={project.title}
+        width={project.isFeatured ? 800 : 400}
+        height={project.isFeatured ? 400 : 300}
         className="w-full h-48 object-cover"
+        style={{ height: 'auto' }}
       />
       <div className="absolute inset-0 bg-gray-800/80 text-white flex flex-col justify-center items-center gap-2 opacity-0 hover:opacity-100 transition-opacity duration-300">
         <h3 className="text-xl font-semibold">{project.title}</h3>
