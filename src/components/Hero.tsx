@@ -30,11 +30,11 @@ const Hero = () => {
   }, [textRef.current]);
 
   return (
-    <section className="w-full flex flex-col items-center justify-center py-64 mt-48">
+    <section className="w-full flex flex-col items-center justify-center pt-48 pb-64 mt-12">
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
-          <h1 className="text-4xl font-bold" style={{ fontFamily: 'Caveat Brush' }}>
+          <h1 className="text-5xl font-bold" style={{ fontFamily: 'Caveat Brush' }}>
   <span className="relative inline-block text-[#9BC7F3]">
     <span className="relative z-10">Hello! I'm Martin. 👋</span>
     <span className="absolute left-0 bottom-0 w-full h-3 bg-[#9BC7F3]/30 rounded-full -z-10" />
@@ -49,7 +49,7 @@ const Hero = () => {
             <Image
               src="https://picsum.photos/300/300"
               alt="Profile"
-              className="rounded-full w-40 h-40 object-cover shadow-md"
+              className="rounded-full w-56 h-56 object-cover shadow-md"
               width={300}
               height={300}
               style={{objectFit: 'cover'}}
