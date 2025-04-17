@@ -22,7 +22,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="py-24 flex flex-col items-center justify-center">
+    <section className="py-32 flex flex-col items-center justify-center">
       <div className="max-w-5xl w-full px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
@@ -38,7 +38,7 @@ const Hero = () => {
             <Image
               src="https://picsum.photos/300/300"
               alt="Profile"
-              className="rounded-full w-48 h-48 object-cover"
+              className="rounded-full w-40 h-40 object-cover shadow-md"
               width={300}
               height={300}
               style={{objectFit: 'cover'}}
