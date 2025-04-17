@@ -10,42 +10,30 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center">
       {/* Hero Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <Hero />
-        </div>
+      <section className="w-full py-16">
+        <Hero />
       </section>
 
       {/* Project Showcase Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <ProjectShowcase />
-        </div>
+      <section className="w-full py-16">
+        <ProjectShowcase />
       </section>
 
       {/* About Me Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <AboutMe />
-        </div>
+      <section className="w-full py-16">
+        <AboutMe />
       </section>
 
       {/* Toolkit Display Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <ToolkitDisplay />
-        </div>
+      <section className="w-full py-16">
+        <ToolkitDisplay />
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4">
-          <ContactForm />
-        </div>
+      <section className="w-full py-16">
+        <ContactForm />
       </section>
     </div>
   );
 }
-
-
 

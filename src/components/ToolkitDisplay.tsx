@@ -60,22 +60,24 @@ const ToolkitDisplay = () => {
   ];
 
   return (
-    <section className="py-12">
-      <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
-        My Toolkit
-      </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {tools.map((tool, index) => {
-          return (
-            <div
-              key={index}
-              className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
-            >
-              <div className="h-6 w-6 text-foreground">{tool.icon}</div>
-              <span className="text-lg text-foreground mt-2">{tool.name}</span>
-            </div>
-          );
-        })}
+    <section className="w-full py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
+          My Toolkit
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {tools.map((tool, index) => {
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
+              >
+                <div className="h-6 w-6 text-foreground">{tool.icon}</div>
+                <span className="text-lg text-foreground mt-2">{tool.name}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

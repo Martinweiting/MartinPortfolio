@@ -33,24 +33,26 @@ const ProjectShowcase = () => {
   ];
 
   return (
-    <section className="py-12">
-      <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
-        Project Showcase 💻
-      </h2>
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
-          {/* First Project Full Width */}
-          {projects.length > 0 && (
-            <ProjectCard project={projects[0]} isFullWidth={true} />
-          )}
-        </div>
+    <section className="w-full py-12">
+      <div className="max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
+          Project Showcase 💻
+        </h2>
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
+            {/* First Project Full Width */}
+            {projects.length > 0 && (
+              <ProjectCard project={projects[0]} isFullWidth={true} />
+            )}
+          </div>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2">
-          {/* Remaining Projects (Two per row) */}
-          {projects.length > 1 &&
-            projects.slice(1).map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
+          <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2">
+            {/* Remaining Projects (Two per row) */}
+            {projects.length > 1 &&
+              projects.slice(1).map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+          </div>
         </div>
       </div>
     </section>
