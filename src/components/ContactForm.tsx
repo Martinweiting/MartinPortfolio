@@ -18,13 +18,13 @@ const ContactForm = () => {
             Feel free to reach out — whether it's for a collaboration, a question, or just a friendly hello!
           </p>
           <div className="flex justify-center md:justify-start gap-4 mb-6">
-            <a href="#" className="text-foreground hover:text-primary">
+            <a href="https://www.linkedin.com/in/your-linkedin-profile" className="text-foreground hover:text-primary">
               <FaLinkedin size={24} />
             </a>
-            <a href="#" className="text-foreground hover:text-primary">
+            <a href="https://www.instagram.com/your-instagram-profile" className="text-foreground hover:text-primary">
               <FaInstagram size={24} />
             </a>
-            <a href="#" className="text-foreground hover:text-primary">
+            <a href="https://github.com/your-github-profile" className="text-foreground hover:text-primary">
               <FaGithub size={24} />
             </a>
           </div>

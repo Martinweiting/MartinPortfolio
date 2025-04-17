@@ -34,7 +34,7 @@ const ClientSideMenu = () => {
           </button>
           <nav className="flex flex-col items-center space-y-6">
             <Link href="#project-showcase" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
-              Project Showcase
+              Project
             </Link>
             <Link href="#about-me" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
               About Me
