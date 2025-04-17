@@ -40,11 +40,11 @@ const ToolkitDisplay = () => {
       icon: <SiNodedotjs size={24} color="#ADD8E6" />,
     },
     {
-      name: 'HTML',
+      name: 'HTML5',
       icon: <SiHtml5 size={24} color="#ADD8E6" />,
     },
     {
-      name: 'CSS',
+      name: 'CSS3',
       icon: <SiCss3 size={24} color="#ADD8E6" />,
     },
     {
