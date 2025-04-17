@@ -7,11 +7,11 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="w-full py-8" style={{ backgroundColor: '#ADD8E6' }}>
+    <section className="w-full py-8" style={{ backgroundColor: '#A2D2FF' }}>
       <div className="max-w-6xl mx-auto md:flex md:items-start md:justify-between gap-8 px-4">
         {/* Left side: Contact Information */}
         <div className="md:w-1/2 text-center md:text-left">
-          <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2">
+          <h2 className="text-3xl font-semibold text-[white] mb-4 md:mb-6 flex items-center justify-center md:justify-start gap-2">
             Let's Connect! ✉️
           </h2>
           <p className="text-lg text-foreground mb-6" style={{ color: 'white' }}>
@@ -19,13 +19,13 @@ const ContactForm = () => {
           </p>
           <div className="flex justify-center md:justify-start gap-4 mb-6">
             <a href="https://www.linkedin.com/in/wuweiting-166782288" className="hover:text-primary text-[#9BC7F3]">
-              <FaLinkedin size={24} color="white" />
+              <FaLinkedin size={24} color="#1E3A8A" />
             </a>
             <a href="https://www.instagram.com/0225mar_tin/" className="hover:text-primary text-[#9BC7F3]">
-              <FaInstagram size={24} color="white" />
+              <FaInstagram size={24} color="#1E3A8A" />
             </a>
             <a href="https://github.com/Martinweiting" className="hover:text-primary text-[#9BC7F3]">
-              <FaGithub size={24} color="white" />
+              <FaGithub size={24} color="#1E3A8A" />
             </a>
           </div>
         </div>

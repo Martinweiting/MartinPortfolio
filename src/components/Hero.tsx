@@ -41,8 +41,7 @@ const Hero = () => {
   </span>
 </h1>
             <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left" style={{ fontFamily: 'Inter', color: 'grey' }}>
-              A front-end engineer with an education background, curious mind,
-              and a passion for crafting thoughtful, intuitive web experiences. ✨
+            Currently enjoying building intuitive web experiences and exploring new ideas in tech. Open to opportunities across the industry — always excited to build things that matter. ✨
             </p>
           </div>
           <div className="sm:w-1/2 flex justify-end">
