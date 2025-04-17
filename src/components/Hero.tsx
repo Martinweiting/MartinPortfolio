@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <section className="py-24 flex flex-col items-center justify-center">
       <div className="max-w-5xl w-full px-4 flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
-        <div className="text-center sm:text-left">
+        <div className="text-center sm:text-left sm:w-1/2">
           <h1 className="text-4xl font-bold text-[#9BC7F3]">
             Hello! I'm Martin. 👋
           </h1>
@@ -33,14 +33,16 @@ const Hero = () => {
             and a passion for crafting thoughtful, intuitive web experiences. ✨
           </p>
         </div>
-        <Image
-          src="https://picsum.photos/300/300"
-          alt="Profile"
-          className="rounded-full mx-auto sm:mx-0 w-48 h-48 object-cover"
-          width={300}
-          height={300}
-          style={{objectFit: 'cover'}}
-        />
+        <div className="sm:w-1/2 flex justify-center">
+          <Image
+            src="https://picsum.photos/300/300"
+            alt="Profile"
+            className="rounded-full w-48 h-48 object-cover"
+            width={300}
+            height={300}
+            style={{objectFit: 'cover'}}
+          />
+        </div>
       </div>
       {showScrollIndicator && (
         <motion.div
