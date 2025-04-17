@@ -18,7 +18,7 @@ export default function Home() {
 
       {/* Project Showcase Section */}
       <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <ProjectShowcase />
         </div>
       </section>
@@ -46,5 +46,6 @@ export default function Home() {
     </div>
   );
 }
+
 
 
