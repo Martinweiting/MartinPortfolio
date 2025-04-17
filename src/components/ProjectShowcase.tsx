@@ -30,6 +30,30 @@ const ProjectShowcase = () => {
       demoLink: '#',
       techStack: [],
     },
+    {
+      title: 'Project 4',
+      description: 'A brief description of project 4.',
+      image: 'https://picsum.photos/600/400',
+      githubLink: '#',
+      demoLink: '#',
+      techStack: [],
+    },
+    {
+      title: 'Project 5',
+      description: 'A brief description of project 5.',
+      image: 'https://picsum.photos/600/400',
+      githubLink: '#',
+      demoLink: '#',
+      techStack: [],
+    },
+    {
+      title: 'Project 6',
+      description: 'A brief description of project 6.',
+      image: 'https://picsum.photos/600/400',
+      githubLink: '#',
+      demoLink: '#',
+      techStack: [],
+    },
   ];
 
   return (
@@ -38,21 +62,10 @@ const ProjectShowcase = () => {
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">
           Project Showcase 💻
         </h2>
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-1">
-            {/* First Project Full Width */}
-            {projects.length > 0 && (
-              <ProjectCard project={projects[0]} isFullWidth={true} />
-            )}
-          </div>
-
-          <div className="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2">
-            {/* Remaining Projects (Two per row) */}
-            {projects.length > 1 &&
-              projects.slice(1).map((project, index) => (
-                <ProjectCard key={index} project={project} />
-              ))}
-          </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} />
+          ))}
         </div>
       </div>
     </section>
@@ -68,19 +81,15 @@ interface ProjectCardProps {
     demoLink: string;
     techStack: string[];
   };
-  isFullscreen?: boolean;
-  isFullWidth?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className={`rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 ${
-        isFullWidth ? 'md:col-span-2' : ''
-      } ${
-        isHovered ? 'transform scale-105' : ''
+      className={`rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${
+        isHovered ? 'scale-105' : ''
       }`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -118,3 +127,5 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFullWidth }) => {
 };
 
 export default ProjectShowcase;
+
+    
