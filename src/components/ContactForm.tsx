@@ -7,7 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 
 const ContactForm = () => {
   return (
-    <section className="w-full bg-[#ADD8E6] py-12">
+    <section className="w-full bg-[#ADD8E6]">
       <div className="max-w-6xl mx-auto md:flex md:items-start md:justify-between gap-8 px-4">
         {/* Left side: Contact Information */}
         <div className="md:w-1/2 text-center md:text-left">
