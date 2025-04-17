@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import {Menu} from 'lucide-react';
+import {Menu, X} from 'lucide-react';
 import {useState} from 'react';
 
 const ClientSideMenu = () => {
@@ -23,16 +23,25 @@ const ClientSideMenu = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="sm:hidden absolute top-full right-0 bg-[#B0E2FF] w-60 rounded-md shadow-md py-2 z-20">
-          <Link href="#project-showcase" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
-            Projects
-          </Link>
-          <Link href="#about-me" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
-            About Me
-          </Link>
-          <Link href="#contact-form" className="block px-4 py-2 text-foreground hover:bg-accent hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
-            Contact
-          </Link>
+        <div className="fixed top-0 left-0 w-full h-full bg-[#B0E2FF] z-50 flex flex-col items-center justify-center">
+          <button
+            onClick={toggleMenu}
+            className="absolute top-4 right-4 text-foreground focus:outline-none"
+            aria-label="Close menu"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <nav className="flex flex-col items-center space-y-6">
+            <Link href="#project-showcase" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+              Projects
+            </Link>
+            <Link href="#about-me" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+              About Me
+            </Link>
+            <Link href="#contact-form" className="text-2xl text-foreground hover:text-accent-foreground" onClick={() => setIsOpen(false)}>
+              Contact
+            </Link>
+          </nav>
         </div>
       )}
     </>
@@ -40,4 +49,3 @@ const ClientSideMenu = () => {
 };
 
 export default ClientSideMenu;
-
