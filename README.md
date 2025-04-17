@@ -1,3 +1,18 @@
+<div align="center">
+    <br/>
+    <p>
+        <img src="public/images/3.jpg" title="profile" alt="profile logo" width="100" />
+    </p>
+    <p>
+        best way to save what you love
+        <br/>
+        <a href="https://martin-portfolio-gules.vercel.app/">
+            Portfolio
+        </a>
+    </p>
+    <br/>
+</div>
+
 # My Personal Website
 
 Welcome to my personal website project! This website showcases who I am, the projects I work on, and the tools I use to bring my ideas to life. Below you'll find an overview of each section of the site and what you can expect from them.
@@ -25,32 +40,6 @@ If you're interested in collaborating or have any questions, the **Contact Form*
 ---
 
 Feel free to explore the website, check out my projects, and reach out if you have any questions or opportunities for collaboration! 🚀
-
-## Installation
-
-To run this project locally:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   ```
-
-2. Navigate into the project directory:
-   ```bash
-   cd yourrepository
-   ```
-
-3. Install the required dependencies:
-   ```bash
-   npm install
-   ```
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-Your website should now be live on `http://localhost:3000`.
 
 ## License
 
