@@ -23,12 +23,12 @@ const Hero = () => {
 
   return (
     <section className="py-24 flex flex-col items-center justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl w-full">
-        <div className="text-center md:text-left">
+      <div className="max-w-5xl w-full px-4 flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
+        <div className="text-center sm:text-left">
           <h1 className="text-4xl font-bold text-[#9BC7F3]">
             Hello! I'm Martin. 👋
           </h1>
-          <p className="text-lg mt-2 text-foreground text-muted-foreground text-center md:text-left">
+          <p className="text-lg mt-2 text-foreground text-muted-foreground text-center sm:text-left">
             A front-end engineer with an education background, curious mind,
             and a passion for crafting thoughtful, intuitive web experiences. ✨
           </p>
@@ -36,7 +36,7 @@ const Hero = () => {
         <Image
           src="https://picsum.photos/300/300"
           alt="Profile"
-          className="rounded-full mx-auto md:mx-0"
+          className="rounded-full mx-auto sm:mx-0 w-48 h-48 object-cover"
           width={300}
           height={300}
           style={{objectFit: 'cover'}}
