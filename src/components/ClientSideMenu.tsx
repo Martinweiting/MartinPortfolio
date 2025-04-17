@@ -23,7 +23,8 @@ const ClientSideMenu = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-[#B0E2FF] z-50 flex flex-col items-center justify-center">
+        <div className="fixed top-0 left-0 w-full h-full bg-[#B0E2FF] z-50 flex flex-col items-center justify-center transition-all duration-300 ease-in-out"
+        style={{ transform: isOpen ? 'translateY(0)' : 'translateY(100%)' }}>
           <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-foreground focus:outline-none"
@@ -44,6 +45,19 @@ const ClientSideMenu = () => {
           </nav>
         </div>
       )}
+
+      {/* Desktop Menu */}
+      <nav className="hidden sm:flex space-x-6">
+        <Link href="#project-showcase" className="text-foreground hover:text-accent-foreground">
+          Projects
+        </Link>
+        <Link href="#about-me" className="text-foreground hover:text-accent-foreground">
+          About Me
+        </Link>
+        <Link href="#contact-form" className="text-foreground hover:text-accent-foreground">
+          Contact
+        </Link>
+      </nav>
     </>
   );
 };
