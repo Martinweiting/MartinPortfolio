@@ -1,7 +1,5 @@
 # My Personal Website
-
 <div align="center">
-        <br/>
         <a href="https://martin-portfolio-gules.vercel.app/">
             Portfolio
         </a>
