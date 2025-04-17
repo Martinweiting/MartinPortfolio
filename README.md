@@ -1,12 +1,19 @@
 # My Personal Website
 
+## Intro and Online Link
 <div>
+    <br/>
+    <p>
+        <img src="public/images/3.jpg" title="profile" alt="profile logo" width="100" />
+    </p>
+    <p>
+        best way to save what you love
         <br/>
         <a href="https://martin-portfolio-gules.vercel.app/">
             Portfolio
         </a>
+    <br/>
 </div>
-
 Welcome to my personal website project! This website showcases who I am, the projects I work on, and the tools I use to bring my ideas to life. Below you'll find an overview of each section of the site and what you can expect from them.
 
 ## Homepage
