@@ -22,8 +22,8 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="py-32 flex flex-col items-center justify-center">
-      <div className="max-w-5xl w-full px-4">
+    <section className="flex flex-col items-center justify-center py-24">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
             <h1 className="text-4xl font-bold text-[#9BC7F3]">

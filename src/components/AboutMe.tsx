@@ -1,9 +1,10 @@
 
+
 const AboutMe = () => {
   return (
-    <section className="py-24 md:py-16">
+    <section className="py-24">
       <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6">About Me</h2>
-      <div className="flex flex-col sm:flex-col md:flex-row gap-6 items-center">
+      <div className="flex flex-col md:flex-row gap-6 items-center">
         <img
           src="https://picsum.photos/500/400"
           alt="About Me"
