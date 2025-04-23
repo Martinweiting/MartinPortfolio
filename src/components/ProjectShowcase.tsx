@@ -11,8 +11,8 @@ const ProjectShowcase = () => {
       description:
         'Connect, adopt, and care — your gateway to a better life for pets.',
       image: '/images/1.jpg',
-      githubLink: 'https://github.com/renh252/final',
-      demoLink: 'https://github.com/renh252/final',
+      githubLink: 'https://github.com/Martinweiting/final',
+      demoLink: 'https://github.com/martinweiting/final',
       techStack: ['Next.js', 'React', 'Bootstrap'],
       isFeatured: true,
     },
