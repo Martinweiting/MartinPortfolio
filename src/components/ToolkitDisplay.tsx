@@ -1,7 +1,8 @@
 'use client';
 
-import {useEffect, useState} from 'react';
-import {Settings} from 'lucide-react';
+import { useEffect, useState, useRef } from 'react'; // Import useRef
+import { motion, useInView } from 'framer-motion'; // Import motion and useInView
+import { Settings } from 'lucide-react';
 import {
   SiJavascript,
   SiReact,
@@ -18,6 +19,14 @@ import {
 } from 'react-icons/si';
 
 const ToolkitDisplay = () => {
+  const ref = useRef(null); // Create a ref
+  const isInView = useInView(ref, { once: true, amount: 0.2 }); // Trigger animation once when 20% is visible
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 }, // Start hidden and slightly down
+    visible: { opacity: 1, y: 0 },   // Fade in and slide up to original position
+  };
+
   const tools = [
     {
       name: 'JavaScript',
@@ -70,7 +79,14 @@ const ToolkitDisplay = () => {
   ];
 
   return (
-    <section className="w-full py-8">
+    <motion.section // Wrap with motion.section
+      ref={ref} // Attach the ref
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={variants}
+      transition={{ duration: 0.8, ease: "easeOut" }} // Animation duration and easing
+      className="w-full py-8"
+    >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl font-semibold text-[#9BC7F3] mb-6 flex items-center gap-2">
           My Toolkit ⚙️
@@ -89,7 +105,7 @@ const ToolkitDisplay = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section> // Close motion.section
   );
 };
 
