@@ -31,7 +31,12 @@ const Hero = () => {
 
   return (
     <section className="w-full flex flex-col items-center justify-center pt-64 pb-48 mt-12">
-      <div className="max-w-6xl mx-auto px-4">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }} // Initial state: invisible and slightly down
+        animate={{ opacity: 1, y: 0 }}   // Final state: fully visible and at original position
+        transition={{ duration: 0.8, ease: "easeOut" }} // Animation duration and easing
+        className="max-w-6xl mx-auto px-4"
+      >
         <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mx-auto">
           <div className="text-center sm:text-left sm:w-1/2">
           <h1 className="text-5xl font-bold" style={{ fontFamily: 'Caveat Brush' }}>
@@ -55,7 +60,7 @@ const Hero = () => {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
       {showScrollIndicator && (
         <motion.div
           initial={{opacity: 0, y: 20}}
