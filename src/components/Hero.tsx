@@ -63,12 +63,12 @@ const Hero = () => {
       </motion.div>
       {showScrollIndicator && (
         <motion.div
-          initial={{opacity: 0, y: 20}}
+          initial={{opacity: 0.5, y: 20}}
           animate={{opacity: 1, y: 0}}
           transition={{duration: 1, ease: 'easeInOut', repeat: Infinity, repeatType: 'reverse'}}
           className="mt-48 text-primary"
         >
-          <ChevronDown className="w-6 h-6 animate-bounce" />
+          <ChevronDown className="w-8 h-8 animate-bounce" />
         </motion.div>
       )}
     </section>
