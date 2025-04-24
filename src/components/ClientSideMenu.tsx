@@ -30,7 +30,7 @@ const ClientSideMenu = () => {
             className="absolute top-4 right-4 text-foreground focus:outline-none"
             aria-label="Close menu"
           >
-            <X className="h-10 w-10" />
+            <X className="h-9 w-9 text-[#FFFFFF]" />
           </button>
           <nav className="flex flex-col items-center space-y-6">
             <Link href="#project-showcase" className="text-2xl text-white hover:text-accent-foreground" onClick={() => setIsOpen(false)}>

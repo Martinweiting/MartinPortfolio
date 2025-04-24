@@ -96,7 +96,7 @@ const ToolkitDisplay = () => {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card"
+                className="flex flex-col items-center justify-center p-4 rounded-lg shadow-md bg-card transition-transform duration-300 hover:scale-105"
               >
                 <div className="h-6 w-6 text-foreground">{tool.icon}</div>
                 <span className="text-lg text-muted-foreground mt-2" style={{ fontFamily: 'Caveat Brush', cursive: 'true' }}>{tool.name}</span>
