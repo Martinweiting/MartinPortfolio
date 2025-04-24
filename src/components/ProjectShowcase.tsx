@@ -1,7 +1,8 @@
 'use client';
 
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
+import { useRef, useState } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 
 const ProjectShowcase = () => {
@@ -48,12 +49,28 @@ const ProjectShowcase = () => {
   const featuredProject = projects.find(project => project.isFeatured);
   const secondaryProjects = projects.filter(project => !project.isFeatured).slice(0, 2);
 
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 }); // Trigger animation once when 20% is visible
+  // Removed animationDirection state and useEffect
+
+  const variants = {
+    hidden: { opacity: 0, y: 50 }, // Changed from hiddenLeft/hiddenRight with x to hidden with y
+    visible: { opacity: 1, y: 0 },  // Changed from x: 0 to y: 0
+  };
+
   return (
-    <section className="w-full py-12">
+    <motion.section
+      ref={ref}
+      className="w-full py-12 overflow-hidden" // Added overflow-hidden
+      initial="hidden" // Changed initial logic
+      animate={isInView ? 'visible' : 'hidden'} // Changed animate logic
+      variants={variants}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
       <div className="max-w-6xl mx-auto px-4">
         <h2
           className="text-3xl font-semibold text-[#9BC7F3] mb-6"
-          style={{fontFamily: 'Caveat Brush'}}
+          style={{ fontFamily: 'Caveat Brush' }}
         >
           Project Showcase 💻
         </h2>
@@ -71,7 +88,7 @@ const ProjectShowcase = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
@@ -88,12 +105,11 @@ interface ProjectCardProps {
   isFeatured?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({project, isFeatured}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ project, isFeatured }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const cardClasses = `rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${
-    isHovered ? 'scale-105' : ''
-  } `;
+  const cardClasses = `rounded-lg shadow-md overflow-hidden relative transition-transform duration-300 transform-gpu ${isHovered ? 'scale-105' : ''
+    } `;
 
   return (
     <div
