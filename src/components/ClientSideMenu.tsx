@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import {Menu, X} from 'lucide-react';
+import { cn } from '@/lib/utils';
 import {useState} from 'react';
 
 const ClientSideMenu = () => {
@@ -22,10 +23,16 @@ const ClientSideMenu = () => {
       </button>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-[#B0E2FF] z-50 flex flex-col items-center justify-center transition-all duration-300 ease-in-out"
-        style={{ transform: isOpen ? 'translateY(0)' : 'translateY(100%)' }}>
-          <button
+      <div
+        className={cn(
+          'fixed top-0 left-0 w-full h-full bg-[#B0E2FF] z-50 flex flex-col items-center justify-center transition-all duration-300 ease-in-out',
+          {
+            'opacity-100 pointer-events-auto translate-y-0': isOpen,
+            'opacity-0 pointer-events-none -translate-y-full': !isOpen,
+          }
+        )}
+      >
+        <button
             onClick={toggleMenu}
             className="absolute top-4 right-4 text-foreground focus:outline-none"
             aria-label="Close menu"
@@ -44,7 +51,6 @@ const ClientSideMenu = () => {
             </Link>
           </nav>
         </div>
-      )}
     </>
   );
 };
